@@ -1,0 +1,77 @@
+/* 设置渐变背景 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f0f4f8, #d9e4f5);
+    color: #333;
+    text-align: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* 添加背景纹理 */
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.4) 1px, transparent 1px);
+    background-size: 30px 30px;
+    pointer-events: none; /* 不影响用户交互 */
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+    color: #2c3e50;
+    line-height: 80px; /* 确保标题和图标垂直居中 */
+}
+
+.icon-container {
+    position: relative;
+    height: 80px; /* 与标题的高度保持一致 */
+}
+
+.left-icon,
+.right-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* 垂直居中 */
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+}
+
+.left-icon {
+    left: 20px; /* 左侧图标距离边缘 20px */
+}
+
+.right-icon {
+    right: 20px; /* 右侧图标距离边缘 20px */
+}
+
+.subtitle-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 120px); /* 减去标题和图标高度 */
+}
+
+.subtitle {
+    font-size: 2em;
+    margin: 15px 0;
+    color: #3498db;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.subtitle:hover {
+    text-decoration: underline;
+    color: #2c3e50;
+    transform: scale(1.05); /* 鼠标悬浮时放大 */
+}

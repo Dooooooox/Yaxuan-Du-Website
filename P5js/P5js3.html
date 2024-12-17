@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>P5js 3: Experimental Clock</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <p>P5js 3: Experimental Clock</p>
+    </main>
+    <script src="sketch3.js"></script> <!-- 加载你的 sketch1.js -->
+  </body>
+  <section class="reflection">
+    <h2>Reflection:</h2>
+    <p class="description">
+      <strong>Description:</strong><br />
+      In the early days of mankind, the most obvious perception of time was night and day, and the regular alternation of night and day allowed people to live regularly even if they did not understand time. So I chose to use the alternation of night and day as a reflection of the clock, the flow of time.
+The moving circle represents the sun, whose color changes from soft yellow to vibrant gold and finally to deep red, representing the changing color of the sun from morning to evening of the day. The background color transitions from dark to light and back again, complementing the changing color of the sun.
+The two buildings in the image are representing a home and a company/school, and the change in color of the figures represents the change in mood of the person from home to school. They are happier at home and become gray at school/work.
+    </p>
+      <p class="description">
+        <strong>Design process:</strong><br />
+        First, a circle moving along a semicircular arc is used to symbolize the rising and setting of the sun and the passage of time, while a color gradient is added to further represent the changing state of the sun. A dynamic background that moves from dark to light and back to dark was used to represent the passage of time. The content that changes with time is animated using “millis()”, which is used for timing, and “lerpColor()”, which is used for smooth color transitions.
+Then fix the Y position of the character, use “mouse X” in X direction to create an effect that can move freely in X direction, and use “map” to realize the color change with the position.
+    </p>
+    <p class="description">
+      <strong>Reflection:</strong><br />
+      This project is about visualizing abstract time through interaction. The effect is further accomplished by combining movement, color gradients and dynamic background changes.
+A key takeaway from the process was the importance of experimentation and iteration. Initially, some of the elements did not display as well as they should have, which prompted me to revisit the drawing and colors. It was only through step-by-step refinement and changes that the effect eventually became satisfying!
+      </p>
+  </section>
+</html>

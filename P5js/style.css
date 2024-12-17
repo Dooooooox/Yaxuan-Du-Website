@@ -1,0 +1,45 @@
+/* 全局样式 */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* 页面最小高度 */
+  display: flex;
+  flex-direction: column; /* 垂直排列 */
+  align-items: center; /* 水平居中 */
+  background-color: #f4f4f9; /* 背景颜色 */
+  font-family: Arial, sans-serif;
+  color: #333;
+  text-align: center;
+}
+
+/* 主内容样式 */
+main {
+  font-size: 2.5em; /* 调整字体大小，例如2.5倍默认大小 */
+    font-weight: bold; /* 加粗字体（可选） */
+    color: #2c3e50; /* 字体颜色 */
+    margin-bottom: 20px; /* 与下方内容的间距 */
+    text-align: center; /* 居中显示 */
+}
+
+/* 画布容器 */
+#canvas-container {
+  margin-bottom: 20px; /* 画布与 Reflection 部分的间距 */
+}
+
+/* Reflection 部分样式 */
+.reflection {
+  width: 95%; /* 设置为更宽的占比，例如 95% */
+  max-width: 900px; /* 最大宽度增加到 800px */
+  text-align: left; /* 文本左对齐 */
+  border-top: 2px solid #ccc; /* 顶部分隔线 */
+  padding: 35px; /* 内边距 */
+  background: #fff; /* 背景颜色为白色 */
+  border-radius: 8px; /* 圆角 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+  margin-top: 20px; /* 与上方画布分隔开 */
+}
+
+/* 画布样式 */
+canvas {
+  display: block; /* 避免 canvas 出现额外间隙 */
+}

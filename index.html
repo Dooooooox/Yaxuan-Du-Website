@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YAXUAN DU Projects</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script>
+    <script>
+        let currentSketch;
+
+        function toggleProjects() {
+            const projectList = document.getElementById('project-list');
+            const sketchContainer = document.getElementById('sketch-container');
+            const p5Link = document.querySelector('.link');
+
+            if (projectList.style.display === 'none' || projectList.style.display === '') {
+                projectList.style.display = 'block';
+                sketchContainer.style.display = 'none';
+                p5Link.innerText = 'P5.js';
+            } else {
+                projectList.style.display = 'none';
+                sketchContainer.style.display = 'block';
+                loadSketch('sketch1.js');
+                p5Link.innerText = 'Back';
+            }
+        }
+
+        function loadSketch(sketchFile) {
+            if (currentSketch) currentSketch.remove();
+
+            const newScript = document.createElement('script');
+            newScript.src = sketchFile;
+            newScript.setAttribute('data-sketch', '');
+            document.body.appendChild(newScript);
+            currentSketch = newScript;
+        }
+
+        function returnToMain() {
+            const projectList = document.getElementById('project-list');
+            const sketchContainer = document.getElementById('sketch-container');
+            const p5Link = document.querySelector('.link');
+
+            projectList.style.display = 'none';
+            sketchContainer.style.display = 'none';
+            p5Link.innerText = 'P5.js';
+        }
+    </script>
+</head>
+
+<body>
+    <div class="icon-container">
+        <div class="left-icon" onclick="history.back()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+                <path d="M314.257949 511.802956c107.013345 97.707837..."></path>
+            </svg>
+        </div>
+
+        <h1 onclick="returnToMain()">YAXUAN DU</h1>
+
+        <div class="right-icon" onclick="window.location.href='index.html'">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+                <path d="M900.745478 430.904767l-330.418307-308.008394..."></path>
+            </svg>
+        </div>
+    </div>
+
+    <div class="link-container">
+        <a href="project/project.html" class="title left">Project</a>
+        <a onclick="toggleProjects()" class="link">P5.js</a>
+        <a href="info.html" class="title right">Info</a>
+    </div>
+    
+    <main>
+        <ul id="project-list">
+            <li class="project-item">
+                <a href="P5js/P5js1.html" class="project-link">P5js 1: Lost & Found</a>
+            </li>
+            <li class="project-item">
+                <a href="P5js/P5js2.html" class="project-link">P5js 2: Face Generator</a>
+            </li>
+            <li class="project-item">
+                <a href="P5js/P5js3.html" class="project-link">P5js 3: Experimental Clock</a>
+            </li>
+            <li class="project-item">
+                <a href="P5js/P5js4.html" class="project-link">P5js 4: Exquisite Corpse</a>
+            </li>
+            <li class="project-item">
+                <a href="P5js/P5js5.html" class="project-link">P5js 5: Optical Illusion</a>
+            </li>
+            <li class="project-item">
+                <a href="P5js/P5js6.html" class="project-link">P5js 6: Data Portrait</a>
+            </li>
+            <li class="project-item">
+                <a href="P5js/P5js7.html" class="project-link">P5js 7: Autobiographical Game</a>
+            </li>
+        </ul>
+        
+        
+    </main>
+</body>
+</html>
